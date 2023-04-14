@@ -1,22 +1,9 @@
 public class FileIO {
 	private IBag trashCan;
-	public IBag readTrashCan() throws FileNotFoundException{
-		 
-		Scanner scanner = new Scanner(new File("garbage.txt"));
-		
-		while (scanner.hasNextLine()) {
-	            String line = scanner.nextLine();
-	            String[] parts = line.split(",");
-	            parts[0].trim();
-	            parts[1].trim();
-	            Integer.parseInt(parts[2].trim());
-	            Garbage garbage = new Garbage(parts[0].trim(), parts[1].trim(), Integer.parseInt(parts[2].trim()));
-
-	            trashCan.add(garbage);
-	        }
-	        
-	        scanner.close();
-	        return trashCan;
-	        
-	    }	 	
+	public IBag <T> readTrashCan(){
+		return trashCan;
+	}
+	public boolean updateTrashCan() {
+		return false;
+	}	
 }
