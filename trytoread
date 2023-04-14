@@ -1,0 +1,50 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+
+public class Trytoread {
+	    static int numberOfLines() {
+        int totalLineNumber = -1; 			                          // file okunamazsa diye önlem, copy-past aldım fikri.
+        try {
+            FileReader fileReader = new FileReader("C:\\Users\\ACER\\Downloads\\garbage.txt");                         //file okuma, sonraki
+            BufferedReader bufferedReader = new BufferedReader(fileReader);                                            //metotta da kullandım.
+            int lineNumber = 0;
+            while ((bufferedReader.readLine()) != null) {       
+                lineNumber += 1;                                                     //boş olmayan her satır için 1 ekledim.
+            }
+            totalLineNumber = lineNumber;
+            bufferedReader.close();
+            //System.out.println("Number of lines: " + lineNumber);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return totalLineNumber;               //diğer metotta da kullanacağımız için return kullandım.
+    }
+	
+	    static void readMethod() {  	
+	        try {
+	            FileReader fileReader = new FileReader("C:\\Users\\ACER\\Downloads\\garbage.txt");   
+	            BufferedReader bufferedReader = new BufferedReader(fileReader);
+	            String line;
+	            String[] data = new String[numberOfLines()];                  //İçeriği array yaptım 
+	            int i = 0;                                                    //doğruluğundan şüpheliyim.
+	            while ((line = bufferedReader.readLine()) != null) {          //Kapasiteyi önceki metot sayesinde ekledim.
+	                data[i] = line;
+	                i++;
+	            }            	
+	            bufferedReader.close();
+	            for (String value : data) {
+	                System.out.println(value);
+	            }
+	        } catch (IOException e) {
+	            System.out.println("Error: " + e.toString());
+	        } 
+	    }	    	    	   	    
+	    public static void main(String args[]) 
+	    {
+	        numberOfLines();                 //doğru sayıyı return edecek mi diye kontrol ettim.
+	        readMethod();	                   //dosyayı yazdırmak için, ilk trashcan çıktısı için kullanabiliriz.      	
+	    }
+	    	    
+	}
