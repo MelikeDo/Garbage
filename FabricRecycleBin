@@ -1,0 +1,69 @@
+public class FabricRecycleBin implements IBag {
+
+	@Override
+	public boolean add(Garbage newItem) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isFull() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Garbage removeByIndex(int index) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Garbage remove() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Garbage remove(Garbage item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getItemCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getIndexOf(Garbage item) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean contains(Garbage item) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void displayItems() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean transferTo(Bag<Garbage> targetBag, Garbage item) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

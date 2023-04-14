@@ -1,0 +1,14 @@
+public interface IBag {
+	public boolean add(Garbage newItem);	
+	public boolean isEmpty();
+	public boolean isFull();
+	public Garbage removeByIndex(int index);
+	public Garbage remove();
+	public Garbage remove(Garbage item);
+	public int getItemCount();
+	public int getIndexOf(Garbage item);
+	public boolean contains(Garbage item);
+	public void displayItems();
+	//public boolean transferTo(IBag<Garbage> targetBag, Garbage item);
+
+}
