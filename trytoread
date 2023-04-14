@@ -43,7 +43,7 @@ public class Trytoread {
 	    }	    	    	   	    
 	    public static void main(String args[]) 
 	    {
-	        numberOfLines();                 //doğru sayıyı return edecek mi diye kontrol ettim.
+	        numberOfLines();                   //doğru sayıyı return edecek mi diye kontrol ettim.
 	        readMethod();	                   //dosyayı yazdırmak için, ilk trashcan çıktısı için kullanabiliriz.      	
 	    }
 	    	    
