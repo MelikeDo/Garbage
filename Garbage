@@ -1,0 +1,13 @@
+public class Garbage {
+	String name;
+	String type;
+	int quantity;
+	
+	public Garbage(String name,String type,int quantity)
+	{
+		this.name=name;
+		this.type=type;
+		this.quantity=quantity;
+	}
+
+}
