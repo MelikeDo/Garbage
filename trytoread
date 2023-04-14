@@ -4,7 +4,7 @@ import java.io.IOException;
 
 
 public class Trytoread {
-	    static int numberOfLines() {
+	static int numberOfLines() {
         int totalLineNumber = -1; 			                          // file okunamazsa diye önlem, copy-past aldım fikri.
         try {
             FileReader fileReader = new FileReader("C:\\Users\\ACER\\Downloads\\garbage.txt");                         //file okuma, sonraki
@@ -22,24 +22,26 @@ public class Trytoread {
         return totalLineNumber;               //diğer metotta da kullanacağımız için return kullandım.
     }
 	
-	    static void readMethod() {  	
-	        try {
-	            FileReader fileReader = new FileReader("C:\\Users\\ACER\\Downloads\\garbage.txt");   
-	            BufferedReader bufferedReader = new BufferedReader(fileReader);
-	            String line;
-	            String[] data = new String[numberOfLines()];                  //İçeriği array yaptım 
-	            int i = 0;                                                    //doğruluğundan şüpheliyim.
-	            while ((line = bufferedReader.readLine()) != null) {          //Kapasiteyi önceki metot sayesinde ekledim.
-	                data[i] = line;
-	                i++;
-	            }            	
-	            bufferedReader.close();
-	            for (String value : data) {
-	                System.out.println(value);
-	            }
-	        } catch (IOException e) {
-	            System.out.println("Error: " + e.toString());
+	  static void readMethod() {  	
+	  try {
+	      FileReader fileReader = new FileReader("C:\\Users\\ACER\\Downloads\\garbage.txt");   
+	      BufferedReader bufferedReader = new BufferedReader(fileReader);
+	      String line;
+	      String[] data = new String[numberOfLines()];                  //İçeriği array yaptım 
+	      int i = 0;                                                    //doğruluğundan şüpheliyim.
+	      while ((line = bufferedReader.readLine()) != null) {          //Kapasiteyi önceki metot sayesinde ekledim.
+	      	data[i] = line;
+	     	 i++;
+	      }            	
+	       bufferedReader.close();
+	       for (String value : data) {
+	       	 System.out.println(value);
+	       }
 	        } 
+	  catch (IOException e) 
+	  {
+	       System.out.println("Error: " + e.toString());
+	  } 
 	    }	    	    	   	    
 	    public static void main(String args[]) 
 	    {
