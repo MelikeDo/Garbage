@@ -1,5 +1,5 @@
 public class FileIO {
-private IBag trashCan;
+	private IBag trashCan;
 	public IBag readTrashCan() throws FileNotFoundException{
 		 
 		Scanner scanner = new Scanner(new File("garbage.txt"));
