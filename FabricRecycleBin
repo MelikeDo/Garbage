@@ -1,7 +1,8 @@
-public class FabricRecycleBin implements IBag {
+public class FabricRecycleBin
+public class FabricRecycleBin<T> implements IBag <T> {
 
 	@Override
-	public boolean add(Garbage newItem) {
+	public boolean add(T newItem) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -31,7 +32,7 @@ public class FabricRecycleBin implements IBag {
 	}
 
 	@Override
-	public Garbage remove(Garbage item) {
+	public Garbage remove(T item) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -43,13 +44,13 @@ public class FabricRecycleBin implements IBag {
 	}
 
 	@Override
-	public int getIndexOf(Garbage item) {
+	public int getIndexOf(T item) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public boolean contains(Garbage item) {
+	public boolean contains(T item) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -61,7 +62,7 @@ public class FabricRecycleBin implements IBag {
 	}
 
 	@Override
-	public boolean transferTo(Bag<Garbage> targetBag, Garbage item) {
+	public boolean transferTo(IBag<T> targetBag, T item) {
 		// TODO Auto-generated method stub
 		return false;
 	}
