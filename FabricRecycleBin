@@ -1,4 +1,4 @@
-public class FabricRecycleBin
+
 public class FabricRecycleBin<T> implements IBag <T> {
 
 	@Override
