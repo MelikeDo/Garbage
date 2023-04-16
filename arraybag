@@ -1,0 +1,49 @@
+
+public abstract class ArrayBag<T>implements IBag <T>{
+	 
+	private final T[] bag;
+	private int numberOfEntries;
+	private static final int DEFAULT_CAPACITY = 25;
+	
+	public ArrayBag()
+	{
+		this(DEFAULT_CAPACITY);
+	}
+	public ArrayBag (int capacity) 
+	{
+		T[] tempBag = (T[]) new Object[capacity];
+		bag = tempBag;
+		numberOfEntries = 0;
+	}
+	
+	 public boolean add(T newItem)
+	 {
+	 	boolean result =true;
+	 	if(isArrayFull()) 
+	 	{
+	 		result = false;
+	 	}
+	 	else 
+	 	{
+	 		bag[numberOfEntries]= newItem;
+	 		numberOfEntries++;
+	 	}
+	 	return result;
+	 }
+	 private boolean isArrayFull()
+	 {
+		 return numberOfEntries >= bag.length;
+	 }
+	 public T[] toArray()
+	 {
+		 T[] result = (T[]) new Object[numberOfEntries];
+		 for (int index = 0; index < numberOfEntries; index++)
+		 {
+			 result[index] = bag[index];
+			 } 
+		 return result;
+	 } 
+	 
+	
+
+}
